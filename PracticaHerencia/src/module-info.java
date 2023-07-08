@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author ESPE
- *
- */
-module PracticaHerencia {
-}
