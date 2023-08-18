@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Vista;
 
 import java.awt.Color;
@@ -18,11 +15,6 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 
-
-/**
- *
- * @author Administrador
- */
 public class Registro extends JFrame {
     //Creamos una ventana grafica con JFrame
     //Indagar el API de Java - Libreria JFRAME
@@ -66,7 +58,7 @@ public class Registro extends JFrame {
         panel.add(label);
         //bloqueamos los diseños para hacer diseños propios
         panel.setLayout(null);//anulamos el diseño del panel que viene por defecto
-        label.setBounds(100, 10,350,50);//Cambia el lugar en donde esta el texto
+        label.setBounds(65, 10,350,50);//Cambia el lugar en donde esta el texto
         //Color de fondo de la etiqueta
         label.setForeground(Color.BLUE);
          //panel.setBackground(Color.ORANGE);
@@ -93,7 +85,7 @@ public class Registro extends JFrame {
     }
     public void ColocarBotones(){
         JButton boton = new JButton("CLICK");
-        boton.setBounds(30,310,100,50);
+        boton.setBounds(30,350,100,50);
         panel.add(boton);
         boton.setEnabled(true);
         boton.setMnemonic('a');
@@ -102,7 +94,7 @@ public class Registro extends JFrame {
          JButton boton1 = new JButton("imagen");
          ImageIcon imagen1 =new ImageIcon("boton.jfif");
          
-        boton1.setBounds(150,310,100,50);
+        boton1.setBounds(150,350,100,50);
         panel.add(boton1);
         boton1.setEnabled(true);
         boton1.setMnemonic('b');
@@ -120,21 +112,36 @@ public class Registro extends JFrame {
     
     public void colocarAreaTexto(){
         JTextArea textarea1 = new JTextArea();
-         textarea1.setBounds(130,130,250,150);
+         textarea1.setBounds(35,100,350,50);
          panel.add(textarea1);
          textarea1.setText("POO");
          textarea1.append("\n Escribir aqui....");
          
          //Comandos para crear Scroll en una area de texto
-         JScrollPane barra = new JScrollPane(textarea1);
+         JScrollPane barra = new JScrollPane();
          //Scroll vertical
          barra.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
          //Scroll HORIZONTAL
          barra.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-         textarea1.setBounds(65,380,350,50);
+         textarea1.setBounds(65,255,350,50);
          panel.add(barra);
          
     }
     
 }
 
+/*public void colocarAreaTexto(){
+    JTextArea textarea1 = new JTextArea();
+    textarea1.setBounds(130, 130, 250, 150);
+    panel.add(textarea1);
+    textarea1.setText("POO");
+    textarea1.append("\n Escribir aqui....");
+    
+    JScrollPane barra=new JScrollPane();
+        //verificar
+        barra.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        //HORIZONTAL
+        barra.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        barra.setBounds(30, 310, 100, 50);
+        panel.add(barra);
+}*/
